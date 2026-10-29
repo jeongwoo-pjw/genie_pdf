@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genie Music UX/UI Case Study</title>
+  <meta name="description" content="지니뮤직 앱 UX/UI 개선 케이스 스터디 — PDF 제출용 16:9 슬라이드 (Park Jeong Woo)" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="toolbar">
+    <img src="assets/img/logo-blue.png" alt="genie" />
+    <nav aria-label="페이지 이동">
+      <a href="#p1">01 Cover</a>
+      <a href="#p2">02 Desk Research</a>
+      <a href="#p3">03 Positioning</a>
+      <a href="#p4">04 Persona</a>
+      <a href="#p5">05 Strategy</a>
+      <a href="#p6">06 Navigation</a>
+      <a href="#p7">07 Recommendation</a>
+      <a href="#p8">08 Discovery</a>
+      <a href="#p9">09 Playlist</a>
+      <a href="#p10">10 UI Details</a>
+      <a href="#p11">11 Closing</a>
+    </nav>
+    <a class="ext" href="https://portfolio-geniemusic.vercel.app/" target="_blank" rel="noopener">Interactive Portfolio ↗</a>
+  </header>
+
+  <main class="deck">
+
+    <!-- =========================================================
+         01 · Cover & Overview
+    ========================================================== -->
+    <section class="frame" id="p1">
+      <div class="slide">
+        <div class="cover">
+          <div class="cover-main">
+            <p class="cover-kicker">Mobile App UX/UI · Case Study</p>
+            <h1 class="cover-word"><span class="gradient-text">Genie</span><br />music</h1>
+            <p class="cover-sub">스트리밍의 복잡함을 걷어내고, 몰입을 설계하다.</p>
+            <p class="cover-desc">
+              기존 지니뮤직 앱의 Pain point와 문제점 분석을 통해, 사용자 친화적 음악 서치 및 공유 프로세스를
+              제공하기 위하여 정량적·정성적 데이터를 기반으로 기획한 개인 프로젝트입니다.
+            </p>
+            <dl class="cover-meta">
+              <div><dt>Period</dt><dd>2024.10.03 – 2024.10.10</dd></div>
+              <div><dt>Project type</dt><dd>UX/UI Mobile App Project</dd></div>
+              <div><dt>Participation</dt><dd>Production 100%, Design 100%</dd></div>
+              <div>
+                <dt>Tools</dt>
+                <dd class="tools">
+                  <img src="assets/img/tool-figma.png" alt="Figma" />
+                  <img src="assets/img/tool-illustrator.png" alt="Illustrator" />
+                  <img src="assets/img/tool-vscode.png" alt="VS Code" />
+                  <img src="assets/img/tool-claude.png" alt="Claude" />
+                </dd>
+              </div>
+            </dl>
+
+            <div class="ov">
+              <div class="ov-col">
+                <h3>Background</h3>
+                <ul>
+                  <li>과열되는 음악 스트리밍 시장<span>레드오션</span></li>
+                  <li>익숙함에 머무는 기존 사용자<span>경쟁력 결여</span></li>
+                  <li>다방면으로 성장하는 경쟁사<span>경쟁사 발전</span></li>
+                </ul>
+              </div>
+              <div class="ov-col problem">
+                <h3>Problem</h3>
+                <ul>
+                  <li>복잡한 음악 서치 프로세스<span>길을 잃는 프로세스</span></li>
+                  <li>차별성 있는 기능 활용 부족<span>차별성 결여</span></li>
+                  <li>비효율적인 추천곡 탐색<span>복잡한 접근</span></li>
+                </ul>
+              </div>
+              <div class="ov-col goal">
+                <h3>Goal</h3>
+                <p>복잡한 음악 서치·청취 과정을 개선해, 취향에 맞는 음악을 쉽고 빠르게 찾고 차별화 기능을 손쉽게 쓰는 친화적 스트리밍 서비스</p>
+                <div class="ks">
+                  <span>차별화 기능 강조 레이아웃</span>
+                  <span>곡 탐색·수집 방법 개선</span>
+                  <span>연관추천 프로세스 단축</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cover-visual">
+            <div class="halo" aria-hidden="true"></div>
+            <div class="phone p1"><img src="assets/img/nav-tobe-on.png" alt="TO-BE 홈 화면" /></div>
+            <div class="phone p2"><img src="assets/img/rec-tobe-1.png" alt="TO-BE 재생 화면" /></div>
+            <a class="cover-link" href="https://portfolio-geniemusic.vercel.app/" target="_blank" rel="noopener">
+              <div>
+                <b>Interactive Portfolio</b>
+                <span>portfolio-geniemusic.vercel.app</span>
+              </div>
+              <i>↗</i>
+            </a>
+          </div>
+        </div>
+        <div class="s-foot"><span><b>PARK JEONG WOO</b> · UX/UI Designer</span><span>01 / 11</span></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 · Desk Research
+    ========================================================== -->
+    <section class="frame" id="p2">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">02 <small>/ 11</small></span>
+          <span class="eyebrow">Desk Research</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">국내 Top 3지만 사용자는 줄고, 남은 이유는 <em>‘익숙함’</em>뿐</h2>
+
+        <div class="dr">
+          <!-- 순위 -->
+          <div class="card panel">
+            <h3>스트리밍 앱 국내 Top 3</h3>
+            <p class="cap">2022년 한국인이 가장 많이 사용한 음악 스트리밍 앱 (순위)</p>
+            <ol class="rank">
+              <li><span class="no">01</span>유튜브 뮤직</li>
+              <li><span class="no">02</span>멜론</li>
+              <li class="genie"><span class="no">03</span>지니뮤직</li>
+              <li><span class="no">04</span>플로</li>
+              <li><span class="no">05</span>네이버 바이브</li>
+              <li><span class="no">06</span>스포티파이</li>
+              <li><span class="no">07</span>카카오뮤직</li>
+              <li><span class="no">08</span>벅스</li>
+            </ol>
+            <p class="rank-note">유튜브 뮤직·멜론에 이어 <b>국내 3위</b>. 그러나 오른쪽 사용자 수 추이에서는 3년 연속 감소세.</p>
+            <p class="src">출처: 지니뮤직 · 원본 차트에 수치가 표기되지 않아 순위만 표시</p>
+          </div>
+
+          <!-- 사용자 수 -->
+          <div class="card panel">
+            <h3>하락하는 사용자 수, 멀어지는 경쟁사</h3>
+            <p class="cap">음악 스트리밍 앱 사용자 수 변화 (단위: 만 명)</p>
+            <div class="users">
+              <div class="users-chart">
+                <div class="ug"><i class="ub" style="height:143.6px"><b>277</b></i><i class="ub" style="height:207.3px"><b>400</b></i><i class="ub" style="height:270px"><b>521</b></i></div>
+                <div class="ug"><i class="ub" style="height:245.6px"><b>474</b></i><i class="ub" style="height:233.2px"><b>450</b></i><i class="ub" style="height:237.9px"><b>459</b></i></div>
+                <div class="ug genie"><i class="ub" style="height:139.9px"><b>270</b></i><i class="ub" style="height:119.7px"><b>231</b></i><i class="ub" style="height:105.2px"><b>203</b></i></div>
+                <div class="ug"><i class="ub" style="height:83.4px"><b>161</b></i><i class="ub" style="height:78.3px"><b>151</b></i><i class="ub" style="height:66.3px"><b>128</b></i></div>
+                <div class="ug"><i class="ub" style="height:56px"><b>108</b></i><i class="ub" style="height:58.6px"><b>113</b></i><i class="ub" style="height:57px"><b>110</b></i></div>
+                <div class="ug"><i class="ub" style="height:16.1px"><b>31</b></i><i class="ub" style="height:24.4px"><b>47</b></i><i class="ub" style="height:32.6px"><b>63</b></i></div>
+                <div class="ug"><i class="ub" style="height:23.8px"><b>46</b></i><i class="ub" style="height:18.7px"><b>36</b></i><i class="ub" style="height:16.6px"><b>32</b></i></div>
+                <div class="ug"><i class="ub" style="height:17.6px"><b>34</b></i><i class="ub" style="height:16.6px"><b>32</b></i><i class="ub" style="height:15px"><b>29</b></i></div>
+              </div>
+              <div class="users-x">
+                <span>유튜브뮤직</span><span>멜론</span><span class="genie">지니뮤직</span><span>플로</span><span>바이브</span><span>Spotify</span><span>카카오</span><span>벅스</span>
+              </div>
+              <div class="legend">
+                <span><i style="background:rgba(16,19,26,.14)"></i>2021년</span>
+                <span><i style="background:rgba(16,19,26,.3)"></i>2022년</span>
+                <span><i style="background:rgba(16,19,26,.55)"></i>2023년</span>
+                <span><i style="background:var(--blue)"></i>지니뮤직</span>
+              </div>
+            </div>
+            <div class="users-call">
+              <div class="stat genie"><b>270 → 203만</b><span>지니뮤직 2021 → 2023 (−67만 명)</span></div>
+              <div class="stat"><b>277 → 521만</b><span>유튜브 뮤직 2021 → 2023 (+244만 명)</span></div>
+            </div>
+            <p class="src">출처: 데이터솜 · 증감은 원본 수치로 계산</p>
+          </div>
+
+          <!-- 이용 이유 -->
+          <div class="card panel">
+            <h3>지니뮤직 서비스 이용 이유</h3>
+            <p class="cap">음악 콘텐츠 서비스 이용 이유 · ‘익숙해서’ 응답 비교 (Unit: %)</p>
+            <ul class="reason">
+              <li><span>전체</span><div class="track"><div class="fill" style="width:59%"></div></div><span class="v">59.0</span></li>
+              <li><span>유튜브</span><div class="track"><div class="fill" style="width:69.6%"></div></div><span class="v">69.6</span></li>
+              <li><span>멜론</span><div class="track"><div class="fill" style="width:72.2%"></div></div><span class="v">72.2</span></li>
+              <li class="genie"><span>지니</span><div class="track"><div class="fill" style="width:60.3%"></div></div><span class="v">60.3</span></li>
+            </ul>
+            <p class="reason-sub">지니뮤직 이용 이유 Top 2</p>
+            <div class="reason-pair">
+              <div><img src="assets/img/callout-familiar.jpg" alt="" /><p><b>60.3%</b><span>1위 · 익숙해서</span></p></div>
+              <div><img src="assets/img/callout-promotion.jpg" alt="" /><p><b>50.8%</b><span>2위 · 할인/제휴<br />프로모션이 있어서</span></p></div>
+            </div>
+            <p class="reason-note">반면 지니뮤직에서 <b>‘디자인(UI)·사용성(UX)이 좋아서’</b>, <b>‘내게 맞는 음악 추천을 잘 해줘서’</b>는 하위 응답 — 사용성이 머무는 이유가 되지 못하고 있음 <small>(원본 차트 막대 기준, 수치 미표기)</small></p>
+            <p class="src">출처: 오픈서베이 · 원본에 수치가 표기된 항목만 표시</p>
+          </div>
+        </div>
+
+        <div class="insight-bar">
+          <span class="chip">INSIGHT</span>
+          <p>사용자는 ‘익숙함·혜택’ 때문에 머물 뿐 — <em>사용성을 겨냥한 기능적 강점</em>이 이용 이유가 되어야 한다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 · UX Positioning
+    ========================================================== -->
+    <section class="frame" id="p3">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">03 <small>/ 11</small></span>
+          <span class="eyebrow">UX Positioning</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">서비스 경험 기반 UX 포지셔닝 — 지니뮤직의 강점은 <em>‘유용함’</em></h2>
+
+        <div class="pos">
+          <div class="card pos-chart">
+            <!-- 원본 그래프(chart-experience-ux-position.png)의 서비스별 상대 위치를 그대로 재작도 -->
+            <svg viewBox="0 0 780 720" role="img" aria-label="서비스 경험 기반 UX 포지션: 가로축 즐거움(Hedonic)–유용함(Utilitarian), 세로축 사용자 주도(Control)–시스템 주도(Autonomy). 유튜브 뮤직과 플로는 시스템 주도·즐거움 쪽, 멜론은 중앙 좌상단, 지니뮤직은 네 앱 중 유용함·사용자 주도 쪽에 가장 가까움.">
+              <defs>
+                <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+                  <path d="M0 0L10 5L0 10z" fill="#10131a" />
+                </marker>
+                <radialGradient id="gl">
+                  <stop offset="0" stop-color="#0096ff" stop-opacity=".35" />
+                  <stop offset="1" stop-color="#0096ff" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <g stroke="rgba(16,19,26,.08)" stroke-width="1">
+                <path d="M70 70H710M70 145H710M70 220H710M70 295H710M70 445H710M70 520H710M70 595H710M70 670H710" />
+                <path d="M70 70V670M150 70V670M230 70V670M310 70V670M470 70V670M550 70V670M630 70V670M710 70V670" />
+              </g>
+              <g stroke="#10131a" stroke-width="2.5">
+                <line x1="60" y1="370" x2="720" y2="370" marker-start="url(#ah)" marker-end="url(#ah)" />
+                <line x1="390" y1="60" x2="390" y2="680" marker-start="url(#ah)" marker-end="url(#ah)" />
+              </g>
+              <g font-family="Pretendard Variable, Pretendard, sans-serif" text-anchor="middle">
+                <text x="390" y="30" font-size="21" font-weight="800" fill="#10131a">시스템 주도 <tspan fill="rgba(16,19,26,.45)" font-weight="600" font-size="16">Autonomy</tspan></text>
+                <text x="390" y="712" font-size="21" font-weight="800" fill="#10131a">사용자 주도 <tspan fill="rgba(16,19,26,.45)" font-weight="600" font-size="16">Control</tspan></text>
+                <text x="40" y="342" font-size="21" font-weight="800" fill="#10131a" text-anchor="start">즐거움</text>
+                <text x="40" y="404" font-size="16" font-weight="600" fill="rgba(16,19,26,.45)" text-anchor="start">Hedonic</text>
+                <text x="740" y="342" font-size="21" font-weight="800" fill="#10131a" text-anchor="end">유용함</text>
+                <text x="740" y="404" font-size="16" font-weight="600" fill="rgba(16,19,26,.45)" text-anchor="end">Utilitarian</text>
+              </g>
+              <!-- services: offsets from center × 1.6 (원본 418×391 그래프 측정값) -->
+              <g font-family="Pretendard Variable, Pretendard, sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="rgba(16,19,26,.7)">
+                <image href="assets/img/logo-youtube-music.png" x="250" y="56" width="56" height="61" />
+                <text x="278" y="138">YouTube Music</text>
+                <image href="assets/img/logo-flo.png" x="119" y="124" width="56" height="61" />
+                <text x="147" y="206">FLO</text>
+                <image href="assets/img/logo-melon.png" x="221" y="234" width="56" height="61" />
+                <text x="249" y="316">Melon</text>
+                <circle cx="350" cy="330" r="70" fill="url(#gl)" />
+                <image href="assets/img/genie-icon.png" x="318" y="296" width="64" height="69" />
+                <text x="350" y="392" fill="#0096ff" font-weight="800" font-size="18">GENIE MUSIC</text>
+              </g>
+              <!-- annotation -->
+              <g font-family="Pretendard Variable, Pretendard, sans-serif">
+                <path d="M392 318 C460 300, 500 260, 540 240" stroke="#0096ff" stroke-width="2" stroke-dasharray="6 6" fill="none" />
+                <rect x="520" y="186" width="210" height="56" rx="12" fill="#0096ff" />
+                <text x="625" y="211" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">네 앱 중 상대적으로</text>
+                <text x="625" y="230" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">유용함·사용자 주도 쪽</text>
+              </g>
+            </svg>
+            <p class="src">출처: DBDLAB, 「음악 앱 이용 UX 트렌드 리포트」(2022) · 연합뉴스 보도 재인용 · 원본 그래프의 위치를 가독성 있게 재작도</p>
+          </div>
+
+          <div class="pos-side">
+            <div class="pos-lead">
+              <p>‘지니뮤직’ 사용자는 네 가지 앱 중<br />비교적 Utilitarian(유용함) 경험을 가장 높게 평가</p>
+              <span>외부 리서치 결과를 인용한 자료이며, 본 프로젝트에서 직접 조사한 데이터가 아닙니다.</span>
+            </div>
+            <div class="axis-def">
+              <div><img src="assets/img/genie-icon.png" alt="" /><b>유용한 서비스</b><p>Utilitarian · 실용적, 기능적 측면이 강조되어 유용한 경험</p></div>
+              <div><img src="assets/img/logo-flo.png" alt="" /><b>즐거운 서비스</b><p>Hedonic · 쾌락적, 심미적 측면이 강조되어 즐거움을 느낌</p></div>
+              <div><img src="assets/img/logo-youtube-music.png" alt="" /><b>시스템 주도 서비스</b><p>Autonomy · 주도권이 시스템에 있어, 의사결정 자동화로 편리함</p></div>
+            </div>
+            <div class="card dir">
+              <h3>Insight → UX 개선 방향</h3>
+              <ol>
+                <li>
+                  <p class="from">강점은 ‘기능’인데, 돌비 애트모스·굿나잇 뮤직 등 차별화 기능이 전체메뉴 속에 숨어 있음</p>
+                  <span class="arr">→</span>
+                  <p class="to">차별화 기능을 홈·내비게이션에 노출 <span class="pref">P.06</span></p>
+                </li>
+                <li>
+                  <p class="from">사용자가 직접 찾아 듣는(Control) 경험인데, 연관추천까지의 경로가 길고 맥락이 끊김</p>
+                  <span class="arr">→</span>
+                  <p class="to">추천 진입 단축 · 미리듣기로 청취 맥락 유지 <span class="pref">P.07–08</span></p>
+                </li>
+                <li>
+                  <p class="from">유용함은 결국 ‘내 리스트 관리’에서 체감되는데, 편집 UI의 상태 인식이 어려움</p>
+                  <span class="arr">→</span>
+                  <p class="to">편집 전용 모드와 명확한 선택 상태 <span class="pref">P.09</span></p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 · Persona & User Journey
+    ========================================================== -->
+    <section class="frame" id="p4">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">04 <small>/ 11</small></span>
+          <span class="eyebrow">Persona &amp; User Journey</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">두 사용자의 여정 — <em>탐색 → 청취 → 관리</em> 단계마다 길이 끊긴다</h2>
+
+        <div class="pj">
+          <div class="personas">
+            <article class="card persona">
+              <img src="assets/img/persona-handohun.jpg" alt="한도훈 페르소나" />
+              <div>
+                <div class="who"><b>한도훈</b><span>24세 · 대학생 · genie 3년차</span></div>
+                <q>“나만의 플레이리스트 모으기가 취미인 나, 곡 탐색이 불편해요”</q>
+                <dl>
+                  <div><dt class="b">행동</dt><dd>확고한 취향의 곡을 모아 500곡 넘는 플레이리스트를 직접 관리</dd></div>
+                  <div><dt class="n">니즈</dt><dd>음악 수집을 최소한의 절차로 효율적이게 하고 싶다</dd></div>
+                  <div><dt class="p">불편</dt><dd>곡 선별에 시간 낭비 · 추천곡을 듣다 보면 기존 곡으로 돌아갈 수 없음</dd></div>
+                </dl>
+              </div>
+            </article>
+            <article class="card persona">
+              <img src="assets/img/persona-kimjihye.jpg" alt="김지혜 페르소나" />
+              <div>
+                <div class="who"><b>김지혜</b><span>30세 · IT기업 마케팅부 · genie 6년차</span></div>
+                <q>“지니뮤직만의 특별한 기능들을 자주 사용해요”</q>
+                <dl>
+                  <div><dt class="b">행동</dt><dd>돌비 애트모스·굿나잇 뮤직·뮤직허그 등 지니만의 기능을 자주 사용</dd></div>
+                  <div><dt class="n">니즈</dt><dd>자주 쓰는 기능들을 쉽고 간편하게 찾고 싶다</dd></div>
+                  <div><dt class="p">불편</dt><dd>기능이 전체메뉴에 작은 글씨로 숨어 있어 찾기 힘들고 피로함</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+
+          <div class="journey">
+            <span></span>
+            <div class="j-stage"><b>01</b><span>탐색</span><small>홈 · 키워드별 음악</small></div>
+            <div class="j-stage"><b>02</b><span>청취</span><small>재생 중 연관추천</small></div>
+            <div class="j-stage"><b>03</b><span>관리</span><small>담기 · 재생목록 편집</small></div>
+
+            <span class="j-label">사용자 행동</span>
+            <div class="j-cell">홈 화면에서 지니차트·키워드별 음악을 찾고, 자주 쓰는 기능을 실행하려 함</div>
+            <div class="j-cell">듣던 곡과 비슷한 노래를 찾으려 연관추천 리스트를 열어 미리 들어봄</div>
+            <div class="j-cell">마음에 드는 곡을 MY 플레이리스트에 담고 순서를 정리함</div>
+
+            <span class="j-label">문제</span>
+            <div class="j-cell pr j-arrow">키워드 추천과 차별화 기능이 홈·검색·전체메뉴에 숨어 있음<q>“홈 화면, 검색 화면 모두에 키워드추천이 숨어있었어!”</q></div>
+            <div class="j-cell pr j-arrow">추천 리스트까지 여러 단계를 거치고, 추천곡을 재생하면 원래 곡으로 돌아갈 수 없음<q>“비슷한 느낌의 새로운 노래가 없을까?”</q></div>
+            <div class="j-cell pr j-arrow">담는 과정이 복잡하고, 편집 시 선택 상태를 알아보기 어려움<q>“MY 플레이리스트에 어떻게 담는거였는지 기억이 안 나네”</q></div>
+
+            <span class="j-label">개선 기회</span>
+            <div class="j-cell op j-arrow">홈·내비게이션 개선, 차별화 기능 강조 배치<span class="pref">P.06</span></div>
+            <div class="j-cell op j-arrow">연관추천 진입 단축, 기존 곡으로 돌아갈 수 있는 미리듣기 흐름<span class="pref">P.07–08</span></div>
+            <div class="j-cell op j-arrow">편집에 집중하는 재생목록 UI, 다중 선택 편집<span class="pref">P.09</span></div>
+          </div>
+        </div>
+        <div class="s-foot"><span>기존 User Journey Map(음악 감상 전·중·후)의 Pain point·Opportunity를 3단계로 재구성</span><span></span></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 · Problem & UX Strategy
+    ========================================================== -->
+    <section class="frame" id="p5">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">05 <small>/ 11</small></span>
+          <span class="eyebrow">Problem &amp; UX Strategy</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">문제를 4개의 화면 단위로 나누고, 각각의 설계 원칙을 정했다</h2>
+
+        <div class="strat">
+          <div class="strat-insight">
+            <span class="chip">INSIGHT</span>
+            <h3>사용자가 불편함을 감수하고 머무는 이유가 ‘익숙해서’라면, <em>사용성으로 머물 이유</em>를 만들어야 한다.</h3>
+            <p>실용적이고 차별화된 유용한 서비스를 제공해, 사용자가 편리하게 개인화에 다다를 수 있는 경험을 설계합니다.</p>
+            <div class="goal">
+              <b>UX STRATEGY</b>
+              <p>직관적인 프로세스로 나만의 곡 탐색 · 취향에 맞는 맞춤형 스트리밍 · 차별화 기능 접근성 향상</p>
+            </div>
+          </div>
+
+          <div class="st-table">
+            <span class="st-head">Problem</span><span class="st-head c2">Strategy</span><span class="st-head" style="padding-left:16px">Design Principle</span>
+
+            <div class="st-p"><b>홈 · 내비게이션</b><p>차별화 기능이 전체메뉴 속에 숨어 있고, ‘홈’ 탭 이름이 모호함</p><span>필요도가 낮은 이용권·프로필 아이콘이 GNB를 차지</span></div>
+            <span class="st-arr">→</span>
+            <div class="st-s"><b>STRATEGY 1</b><p>차별화 기능을 GNB·탭바에 배치</p><span>돌비 애트모스 / 굿나잇 뮤직 토글, ‘뮤직’ · ‘뮤직허그’ 탭</span></div>
+            <div class="st-d"><i>기능 발견 가능성</i><b>숨은 기능을 첫 화면으로</b><span class="pref">P.06</span></div>
+
+            <div class="st-p"><b>연관추천 진입</b><p>추천 리스트까지 스와이프–오버스크롤–탭의 단계를 거침</p><span>‘유사곡 리스트’라는 목표 도달 지연</span></div>
+            <span class="st-arr">→</span>
+            <div class="st-s"><b>STRATEGY 2</b><p>상단 스와이프 한 번으로 추천 리스트 진입</p><span>중간 바텀시트·카테고리 탭 단계 제거</span></div>
+            <div class="st-d"><i>조작 부담 최소화</i><b>제스처 한 번에 목적지</b><span class="pref">P.07</span></div>
+
+            <div class="st-p"><b>추천곡 탐색 · 미리듣기</b><p>추천곡을 재생하면 듣던 곡으로 돌아갈 수 없음</p><span>곡 정보 확인을 위해 페이지 이동이 반복됨</span></div>
+            <span class="st-arr">→</span>
+            <div class="st-s"><b>STRATEGY 3</b><p>독립된 미리듣기 레이아웃 추가</p><span>좌우 스와이프로 카테고리·다음 곡 탐색, 카드에서 공유·담기</span></div>
+            <div class="st-d"><i>청취 맥락 유지</i><b>듣던 곡은 그대로, 미리듣기는 분리</b><span class="pref">P.08</span></div>
+
+            <div class="st-p"><b>재생목록 편집</b><p>편집 시 정보 인식이 떨어져 편집이 어려움</p><span>담기·편집 과정을 인식하기 힘든 UI</span></div>
+            <span class="st-arr">→</span>
+            <div class="st-s"><b>STRATEGY 4</b><p>편집에만 집중하는 편집 모드</p><span>탭은 선택만, 드래그로 다수 곡 한 번에 편집</span></div>
+            <div class="st-d"><i>명확한 상태 구분</i><b>재생과 편집을 분리</b><span class="pref">P.09</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 · AS-IS / TO-BE — Navigation
+    ========================================================== -->
+    <section class="frame" id="p6">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">06 <small>/ 11</small></span>
+          <span class="eyebrow">AS-IS / TO-BE · Navigation</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">홈 · 내비게이션 — 지니뮤직에서만 제공하는 차별화 기능을 손쉽게</h2>
+        <div class="problem-band">
+          <span class="chip problem">PROBLEM</span>
+          <ul>
+            <li>필요도가 적은 GNB 구성 (이용권·프로필 아이콘)</li>
+            <li>차별화 기능에 접근하려면 여러 프로세스를 거쳐야 함</li>
+            <li>음악 탐색 메뉴임을 알기 힘든 ‘홈’ 탭 이름</li>
+          </ul>
+        </div>
+
+        <div class="cmp">
+          <div class="side asis">
+            <div class="side-h"><h3>AS-IS</h3><p>메인화면</p></div>
+            <div class="side-body">
+              <div class="shot" style="width:250px">
+                <div class="scr"><div class="phone flat"><img src="assets/img/nav-asis.png" alt="AS-IS 메인화면" /></div>
+                <span class="hl pk" style="top:7.5%;height:5.5%"><i class="mk r">1</i></span>
+                <span class="hl pk" style="top:89.5%;height:5.5%"><i class="mk r">2</i></span></div>
+              </div>
+              <ol class="notes" style="padding-left:20px">
+                <li><i class="mk">1</i><p><b>강점 없는 GNB</b><span>이미 이용권을 구독 중인 다수 사용자에게 이용권 아이콘은 불필요한 UI</span></p></li>
+                <li><i class="mk">2</i><p><b>강점이 보이지 않는 탭바</b><span>홈 · 오디오 · 검색 · 내음악 · 전체메뉴 — 차별화 ‘기능성’ 메뉴 부재</span></p></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="side tobe">
+            <div class="side-h"><h3>TO-BE</h3><p>차별화 기능 노출 · ON / OFF 두 가지 상태</p></div>
+            <div class="side-body">
+              <figure class="shot" style="width:250px">
+                <div class="scr"><div class="phone flat"><img src="assets/img/nav-tobe-on.png" alt="TO-BE 메인화면 — 기능 ON" /></div>
+                <span class="hl" style="top:7.5%;height:5.5%"><i class="mk l">1</i></span>
+                <span class="hl" style="top:37.3%;height:6.6%"><i class="mk l">2</i></span>
+                <span class="hl" style="top:89.5%;height:5.5%"><i class="mk l">3</i></span></div>
+                <figcaption class="state-cap">돌비 애트모스 ON<br />굿나잇 뮤직 ON</figcaption>
+              </figure>
+              <figure class="shot" style="width:250px">
+                <div class="scr"><div class="phone flat"><img src="assets/img/nav-tobe-off.png" alt="TO-BE 메인화면 — 기능 OFF" /></div>
+                <span class="hl" style="top:7.5%;height:5.5%"></span></div>
+                <figcaption class="state-cap">돌비 애트모스 OFF<br />굿나잇 뮤직 OFF</figcaption>
+              </figure>
+              <ol class="notes">
+                <li><i class="mk">1</i><p><b>GNB 토글</b><span>이용권·MY 삭제, 돌비 애트모스 / 굿나잇 뮤직 on/off</span></p></li>
+                <li><i class="mk">2</i><p><b>장르 칩</b><span>콘셉추얼한 구분을 장르별로, 오디오를 메인 컬럼에</span></p></li>
+                <li><i class="mk">3</i><p><b>탭바</b><span>‘홈’→‘뮤직’, 뮤직허그 탭 배치</span></p></li>
+              </ol>
+            </div>
+          </div>
+
+          <aside class="decision">
+            <h3>Design Decision</h3>
+            <ol>
+              <li><i>기능 발견 가능성</i><b>기능을 메뉴 깊숙이가 아닌 GNB에</b><p>전체메뉴 속 작은 글씨 대신, 매번 보는 상단 바에서 바로 켜고 끔</p></li>
+              <li><i>명확한 상태 구분</i><b>아이콘 명도로 ON / OFF 표현</b><p>별도 설정 화면 없이 현재 상태를 아이콘만으로 확인</p></li>
+              <li><i>조작 부담 최소화</i><b>탭 이름이 곧 역할</b><p>‘뮤직’ 아이콘·명칭으로 음악 탐색 메뉴임을 전달, 소통 창구 뮤직허그를 1탭 거리로</p></li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 · AS-IS / TO-BE — Recommendation
+    ========================================================== -->
+    <section class="frame" id="p7">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">07 <small>/ 11</small></span>
+          <span class="eyebrow">AS-IS / TO-BE · Recommendation</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">연관추천 진입 — 리스닝 중, 상단 스와이프만으로 추천 리스트까지</h2>
+        <div class="problem-band">
+          <span class="chip problem">PROBLEM</span>
+          <ul>
+            <li>‘유사곡 리스트’라는 목표에 도달하기까지 시간 지연</li>
+            <li>리스트 전 카테고리를 오버스크롤로 한 번 더 터치해야 하는 불필요한 과정</li>
+          </ul>
+        </div>
+
+        <div class="cmp">
+          <div class="side asis">
+            <div class="side-h"><h3>AS-IS</h3><p>청취화면</p></div>
+            <div class="side-body">
+              <div class="shot" style="width:226px">
+                <span class="step-tag"><i>①</i> 상단 스와이프</span>
+                <div class="scr"><div class="phone flat"><img src="assets/img/rec-asis-1.png" alt="AS-IS 청취화면 바텀시트" /></div>
+                <span class="hl pk" style="top:71%;height:18%"></span></div>
+              </div>
+              <div style="display:grid;gap:12px;align-content:start;width:226px">
+                <div>
+                  <span class="step-tag"><i>②</i> 바텀시트 오버스크롤</span>
+                  <div class="crop"><img src="assets/img/rec-asis-step2.png" alt="오버스크롤로 유사곡 카테고리 노출" /></div>
+                </div>
+                <div>
+                  <span class="step-tag"><i>③</i> 카테고리 탭 → <i>④</i> 리스트</span>
+                  <div class="crop" style="height:182px"><img src="assets/img/rec-asis-step3.png" alt="탭 선택 후 최종 추천 리스트" /></div>
+                </div>
+              </div>
+            </div>
+            <p class="path" style="margin-top:14px"><b>경로</b>상단 스와이프 → 바텀시트 오버스크롤 → 탭 → 추천 리스트<span class="cnt">4단계</span></p>
+          </div>
+
+          <div class="side tobe">
+            <div class="side-h"><h3>TO-BE</h3><p>기본 상태 → 사용자 행동 → 결과</p></div>
+            <div class="side-body flow">
+              <figure class="shot" style="width:210px">
+                <span class="step-tag"><i>기본</i> 재생 화면</span>
+                <div class="scr"><div class="phone flat"><img src="assets/img/rec-tobe-1.png" alt="TO-BE 재생 화면" /></div>
+                <span class="hl" style="top:90.2%;height:4.2%;left:30%;right:30%"></span></div>
+              </figure>
+              <span class="arrow">→</span>
+              <figure class="shot" style="width:210px">
+                <span class="step-tag"><i>행동</i> 상단 스와이프</span>
+                <div class="phone flat" style="height:457px"><img src="assets/img/rec-tobe-2.png" alt="상단으로 스와이프해 추천 리스트가 올라오는 중" /></div>
+                <div class="swipe-ov" style="top:150px">
+                  <svg width="40" height="120" viewBox="0 0 40 120" fill="none"><path d="M20 116V8M20 8L6 24M20 8L34 24" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  <span>Swipe up</span>
+                </div>
+              </figure>
+              <span class="arrow">→</span>
+              <figure class="shot" style="width:210px">
+                <span class="step-tag"><i>결과</i> 추천 리스트</span>
+                <div class="phone flat"><img src="assets/img/rec-tobe-3.png" alt="연관추천 리스트 화면" /></div>
+                <figcaption class="state-cap">미니 플레이어로<br />듣던 곡 유지</figcaption>
+              </figure>
+            </div>
+            <p class="path"><b>경로</b>상단 스와이프 → 추천 리스트 확인<span class="cnt">2단계 (설계 경로 기준)</span></p>
+          </div>
+
+          <aside class="decision">
+            <h3>Design Decision</h3>
+            <ol>
+              <li><i>조작 부담 최소화</i><b>중간 단계를 없애고 제스처 하나로</b><p>곡 재생 하단을 위로 스와이프하면 바로 추천 리스트 화면으로 전환</p></li>
+              <li><i>기능 발견 가능성</i><b>‘연관 추천 ⌃’ 진입점 유지</b><p>기존 사용자가 알던 위치·라벨을 그대로 두어 학습 비용 없이 경로만 단축</p></li>
+              <li><i>청취 맥락 유지</i><b>리스트 하단에 현재 곡 미니 플레이어</b><p>추천을 둘러보는 동안에도 듣던 곡의 재생 상태를 확인</p></li>
+            </ol>
+            <p class="note">단계 수는 화면 설계상 경로 비교이며, 실제 탐색 시간 단축은 검증 전입니다.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 · AS-IS / TO-BE — Music Discovery
+    ========================================================== -->
+    <section class="frame" id="p8">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">08 <small>/ 11</small></span>
+          <span class="eyebrow">AS-IS / TO-BE · Music Discovery</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">추천곡 탐색 · 미리듣기 — 알아서 찾아주고, 바로 들어보고</h2>
+        <div class="problem-band">
+          <span class="chip problem">PROBLEM</span>
+          <ul>
+            <li>복잡한 추천곡 정보 확인 프로세스</li>
+            <li>추천곡 재생 후, 청취하던 기존 음악으로 되돌아가기 불가능</li>
+          </ul>
+        </div>
+
+        <div class="cmp">
+          <div class="side asis">
+            <div class="side-h"><h3>AS-IS</h3><p>연관추천 리스트</p></div>
+            <div class="side-body">
+              <div class="shot" style="width:220px">
+                <span class="step-tag"><i>①</i> ⋮ 더보기</span>
+                <div class="phone flat"><img src="assets/img/disc-asis-list.png" alt="AS-IS 유사곡 리스트" /></div>
+              </div>
+              <div style="display:grid;gap:14px;align-content:start;width:240px">
+                <div>
+                  <span class="step-tag"><i>②</i> 곡 정보 팝업</span>
+                  <div class="crop"><img src="assets/img/disc-asis-popup.png" alt="곡정보·앨범정보·아티스트정보 팝업" /></div>
+                </div>
+                <ol class="notes">
+                  <li><i class="mk">3</i><p><b>정보 확인 → 뒤로가기</b><span>곡 정보는 별도 페이지, 확인 후 다시 리스트로</span></p></li>
+                  <li><i class="mk">4</i><p><b>재생하면 재생목록으로 자동 이동</b><span>듣던 곡으로 돌아갈 수 없음</span></p></li>
+                </ol>
+              </div>
+            </div>
+            <p class="path"><b>경로</b>유사곡 선택 → 곡 정보 페이지 → 뒤로가기 → 재생 → 재생목록 이동<span class="cnt">맥락 끊김</span></p>
+          </div>
+
+          <div class="side tobe">
+            <div class="side-h"><h3>TO-BE</h3><p>연관추천 미리듣기 레이아웃 추가</p></div>
+            <div style="margin-top:14px;position:relative">
+              <img src="assets/img/disc-tobe-layout.png" alt="TO-BE 연관추천 미리듣기 카드 — 유사곡, 아티스트 인기곡, 동일장르 인기곡, 작곡가의 다른곡" style="width:100%" />
+            </div>
+            <div class="cat-row">
+              <span>작곡가의 다른곡</span><i>‹</i><span>동일장르 인기곡</span><i>‹</i><span>아티스트 인기곡</span><i>‹</i><span class="on">유사곡</span>
+              <b style="margin-left:10px;color:var(--blue-d)">좌우 스와이프로 카테고리 전환</b>
+            </div>
+            <p class="path"><b>기본</b>추천 리스트에서 곡 선택 → <b>행동</b>미리듣기 카드 좌우 스와이프 → <b>결과</b>카드에서 공유·담기<span class="cnt">듣던 곡 유지</span></p>
+          </div>
+
+          <aside class="decision">
+            <h3>Design Decision</h3>
+            <ol>
+              <li><i>청취 맥락 유지</i><b>미리듣기를 독립된 창으로 분리</b><p>재생목록을 바꾸지 않고 카드 안에서만 들어보므로, 닫으면 듣던 곡으로 복귀</p></li>
+              <li><i>조작 부담 최소화</i><b>좌우 스와이프 하나로 두 가지 탐색</b><p>카테고리 전환과 다음 곡 탐색을 같은 제스처로</p></li>
+              <li><i>기능 발견 가능성</i><b>GUI로 부가정보를 한눈에</b><p>앨범 이미지·발매일·좋아요·댓글 수와 공유하기 / 담기 버튼을 카드에 직접 노출</p></li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         09 · AS-IS / TO-BE — Playlist Editing
+    ========================================================== -->
+    <section class="frame" id="p9">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">09 <small>/ 11</small></span>
+          <span class="eyebrow">AS-IS / TO-BE · Playlist Editing</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">재생목록 편집 — 편집에만 집중할 수 있게</h2>
+        <div class="problem-band">
+          <span class="chip problem">PROBLEM</span>
+          <ul>
+            <li>과정을 인식하기 힘든 재생목록 편집 UI</li>
+            <li>편집 시 떨어지는 정보 인식으로 편집이 어려움</li>
+            <li>곡을 하나씩 옮겨야 하는 편집 방식</li>
+          </ul>
+        </div>
+
+        <div class="cmp">
+          <div class="side asis">
+            <div class="side-h"><h3>AS-IS</h3><p>재생목록 화면</p></div>
+            <div class="side-body">
+              <div class="shot" style="width:240px">
+                <div class="phone flat"><img src="assets/img/edit-asis.png" alt="AS-IS 재생목록 화면" /></div>
+              </div>
+              <ol class="notes">
+                <li><i class="mk">1</i><p><b>‘재생 | 편집’ 구분이 약함</b><span>작은 텍스트로만 모드를 표시</span></p></li>
+                <li><i class="mk">2</i><p><b>선택 상태 인식이 어려움</b><span>얇은 원형 체크박스, 선택 행의 대비가 낮음</span></p></li>
+                <li><i class="mk">3</i><p><b>한 곡씩 이동</b><span>행마다 드래그 핸들로 순서를 옮겨야 함</span></p></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="side tobe">
+            <div class="side-h"><h3>TO-BE</h3><p>기본 상태 → 사용자 행동 → 결과</p></div>
+            <div class="side-body flow">
+              <figure class="shot" style="width:218px">
+                <span class="step-tag"><i>기본</i> 편집 모드 · 1곡 선택</span>
+                <div class="scr"><div class="phone flat"><img src="assets/img/edit-tobe-1.png" alt="편집 모드 진입, 한 곡 선택" /></div>
+                <span class="hl" style="top:14.8%;height:4%;left:72%;right:-4px"></span>
+                <span class="hl" style="top:45.5%;height:8%"></span></div>
+              </figure>
+              <span class="arrow">→</span>
+              <figure class="shot" style="width:232px">
+                <span class="step-tag"><i>행동</i> 드래그로 3곡 선택</span>
+                <div class="scr"><div class="phone flat"><img src="assets/img/edit-tobe-2.png" alt="드래그로 여러 곡 선택" /></div>
+                <span class="hl" style="top:45.5%;height:23%"></span></div>
+              </figure>
+              <span class="arrow">→</span>
+              <figure class="shot" style="width:218px">
+                <span class="step-tag"><i>결과</i> 3곡 한 번에 이동</span>
+                <div class="scr"><div class="phone flat"><img src="assets/img/edit-tobe-3.png" alt="선택한 세 곡이 함께 이동된 결과" /></div>
+                <span class="hl" style="top:53%;height:23%"></span></div>
+              </figure>
+            </div>
+            <p class="path"><b>편집 모드</b>탭하면 선택만, 재생에는 영향 없음 · 하단 액션바에 선택 개수 배지<span class="cnt">다중 곡 편집</span></p>
+          </div>
+
+          <aside class="decision">
+            <h3>Design Decision</h3>
+            <ol>
+              <li><i>명확한 상태 구분</i><b>재생과 편집을 모드로 분리</b><p>편집 모드에서는 곡을 탭해도 선택만 가능, 곡 재생에는 영향을 주지 않음</p></li>
+              <li><i>명확한 상태 구분</i><b>선택된 곡을 시각적으로 강조</b><p>채워진 블루 체크 + 행 배경 하이라이트, 하단 바에 선택 개수 표시</p></li>
+              <li><i>조작 부담 최소화</i><b>드래그로 여러 곡을 한 번에</b><p>한 곡씩 옮기던 방식에서 다수 곡 일괄 이동·삭제·담기로</p></li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10 · Interaction & UI Details
+    ========================================================== -->
+    <section class="frame" id="p10">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">10 <small>/ 11</small></span>
+          <span class="eyebrow">Interaction &amp; UI Details</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">움직임 없이도 읽히도록 — 상태와 제스처를 화면 단위로 정리</h2>
+
+        <div class="ui-grid">
+          <div class="card ui-tile">
+            <div class="t"><h3>차별화 기능 토글</h3><span class="chip">상태 구분</span></div>
+            <div class="ui-stage">
+              <div class="crop-row"><span class="on">ON</span><div class="crop"><img src="assets/img/d-gnb-on.png" alt="GNB 기능 ON" /></div></div>
+              <div class="crop-row"><span class="off">OFF</span><div class="crop"><img src="assets/img/d-gnb-off.png" alt="GNB 기능 OFF" /></div></div>
+            </div>
+            <p class="rule"><b>왼쪽 돌비 애트모스 · 오른쪽 굿나잇 뮤직.</b> 흰색(ON) / 회색(OFF) 명도 대비로 현재 상태를 표시</p>
+          </div>
+
+          <div class="card ui-tile">
+            <div class="t"><h3>하단 탭바</h3><span class="chip">기능 발견</span></div>
+            <div class="ui-stage">
+              <div class="crop-row"><span class="off">AS-IS</span><div class="crop"><img src="assets/img/d-tab-asis.png" alt="AS-IS 탭바: 홈 오디오 검색 내음악 전체메뉴" /></div></div>
+              <div class="crop-row"><span class="on">TO-BE</span><div class="crop"><img src="assets/img/d-tab-tobe.png" alt="TO-BE 탭바: 뮤직 뮤직허그 검색 내음악 전체메뉴" /></div></div>
+            </div>
+            <p class="rule"><b>‘홈’ → ‘뮤직’</b>으로 음악 탐색 메뉴임을 아이콘·명칭으로 전달하고, 소통 창구 <b>뮤직허그</b>를 탭바에 배치</p>
+          </div>
+
+          <div class="card ui-tile">
+            <div class="t"><h3>장르 칩</h3><span class="chip">탐색 가이드</span></div>
+            <div class="ui-stage">
+              <div class="crop-row"><span class="off">AS-IS</span><div class="crop"><img src="assets/img/d-chip-asis.png" alt="AS-IS 콘셉트 칩: 운동 휴식 집중" /></div></div>
+              <div class="crop-row"><span class="on">TO-BE</span><div class="crop"><img src="assets/img/d-chip-tobe.png" alt="TO-BE 장르 칩: 발라드 KPOP 힙합 알앤비 재즈" /></div></div>
+            </div>
+            <p class="rule">운동·휴식·집중 같은 <b>콘셉추얼한 구분</b>을 발라드·KPOP·힙합 등 <b>장르별</b>로 나눠 직관적인 가이드 제공</p>
+          </div>
+
+          <div class="card ui-tile">
+            <div class="t"><h3>연관추천 진입 제스처</h3><span class="chip">조작 최소화</span></div>
+            <div class="seq">
+              <figure><div class="crop" style="height:104px;display:flex;align-items:center"><img src="assets/img/d-rec-btn.png" alt="연관 추천 진입점" /></div><figcaption>기본<b>진입점 표시</b></figcaption></figure>
+              <span class="arrow">→</span>
+              <figure>
+                <div class="gesture">
+                  <svg width="26" height="54" viewBox="0 0 26 54" fill="none"><path d="M13 52V4M13 4L3 15M13 4L23 15" stroke="#0096ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  <span>위로 스와이프</span>
+                </div>
+                <figcaption>행동<b>상단 스와이프</b></figcaption>
+              </figure>
+              <span class="arrow">→</span>
+              <figure><div class="crop" style="height:104px"><img src="assets/img/d-rec-handle.png" alt="연관추천 리스트 시트" /></div><figcaption>결과<b>추천 리스트</b></figcaption></figure>
+            </div>
+            <p class="rule">애니메이션 대신 <b>기본 → 행동 → 결과</b> 3컷으로 전환 과정을 표현</p>
+          </div>
+
+          <div class="card ui-tile">
+            <div class="t"><h3>미리듣기 카드</h3><span class="chip">한눈에 정보</span></div>
+            <div class="ui-stage">
+              <div class="crop fit" style="--h:132px"><img src="assets/img/d-preview-info.png" alt="미리듣기 카드의 곡명·발매일·댓글·좋아요 정보" /></div>
+              <div class="crop fit" style="--h:66px;background:transparent"><img src="assets/img/d-preview-btn.png" alt="공유하기 / 담기 버튼" /></div>
+            </div>
+            <p class="rule">곡·발매일·댓글·좋아요 수를 <b>이미지와 함께</b> 표시하고, <b>공유하기 / 담기</b>를 카드 하단 고정 버튼으로</p>
+          </div>
+
+          <div class="card ui-tile">
+            <div class="t"><h3>편집 모드 상태</h3><span class="chip">상태 구분</span></div>
+            <div class="ui-stage">
+              <div class="crop fit" style="--h:66px"><img src="assets/img/d-edit-toggle.png" alt="재생 | 편집 모드 토글" /></div>
+              <div class="crop fit" style="--h:104px"><img src="assets/img/d-edit-select.png" alt="선택된 행 하이라이트" /></div>
+              <div class="crop fit" style="--h:52px"><img src="assets/img/d-edit-bar.png" alt="선택 개수 배지와 하단 액션바" /></div>
+            </div>
+            <p class="rule"><b>재생 | 편집</b> 모드 표시 → 선택 행 하이라이트 → 선택 개수 배지 + 액션바(선택듣기·담기·다운·삭제)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         11 · Closing
+    ========================================================== -->
+    <section class="frame" id="p11">
+      <div class="slide">
+        <div class="s-top">
+          <span class="num">11 <small>/ 11</small></span>
+          <span class="eyebrow">Closing</span>
+          <img class="logo" src="assets/img/logo-blue.png" alt="genie" />
+        </div>
+        <h2 class="s-title">무엇을 바꿨고, 무엇은 아직 검증하지 않았는가</h2>
+
+        <div class="close-grid">
+          <div class="card cq">
+            <div class="h"><b>01</b><h3>WHAT I IMPROVED</h3></div>
+            <ul>
+              <li><p><b>탐색 접근성</b><span>차별화 기능을 GNB·탭바로, 연관추천 진입을 상단 스와이프 한 번으로</span></p><span class="pref">P.06–07</span></li>
+              <li><p><b>청취 맥락 유지</b><span>독립된 미리듣기 카드로 듣던 곡을 유지한 채 추천곡 탐색</span></p><span class="pref">P.08</span></li>
+              <li><p><b>재생목록 편집 흐름</b><span>편집 전용 모드와 드래그 다중 선택으로 편집 과정 단순화</span></p><span class="pref">P.09</span></li>
+            </ul>
+          </div>
+
+          <div class="card cq">
+            <div class="h"><b>02</b><h3>DESIGN DECISIONS</h3></div>
+            <ul>
+              <li><p><b>조작 부담 최소화</b><span>중간 단계를 줄이고, 하나의 제스처가 하나의 목적지로</span></p></li>
+              <li><p><b>기능 발견 가능성</b><span>숨은 기능을 매번 보는 영역에 배치하고 이름으로 역할을 전달</span></p></li>
+              <li><p><b>명확한 상태 구분</b><span>ON/OFF, 재생/편집, 선택/미선택을 색·명도·모드로 구분</span></p></li>
+            </ul>
+          </div>
+
+          <div class="card cq limit">
+            <div class="h"><b>03</b><h3>VALIDATION LIMITATIONS</h3></div>
+            <ul>
+              <li><p><b>탐색 시간</b><span>단계 수 감소는 설계 경로 비교일 뿐, 실제 소요 시간은 측정하지 않음</span></p><span class="tag">미검증</span></li>
+              <li><p><b>오류율</b><span>제스처 진입·드래그 선택의 오조작 빈도는 확인되지 않음</span></p><span class="tag">미검증</span></li>
+              <li><p><b>사용성 만족도</b><span>실사용자 대상 만족도 평가를 진행하지 않음</span></p><span class="tag">미검증</span></li>
+            </ul>
+          </div>
+
+          <div class="card cq next">
+            <div class="h"><b>04</b><h3>NEXT STEPS</h3></div>
+            <ul>
+              <li><p><b>프로토타입 사용성 테스트</b><span>AS-IS / TO-BE 프로토타입으로 동일 과제(추천 진입·미리듣기·편집) 수행 비교</span></p></li>
+              <li><p><b>가설 검증 지표</b><span>과제 완료 시간 · 오류 횟수 · 사용성 만족도 설문으로 가설 검증</span></p></li>
+              <li><p><b>결과 기반 개선</b><span>제스처 발견성이 낮으면 진입점 힌트 등 보조 UI를 반복 개선</span></p></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="close-foot">
+          <span class="word gradient-text">genie</span>
+          <p>익숙함에 머무르던 사용자에게, 직관적인 플로우로 차별화된 음악 경험을 — PARK JEONG WOO</p>
+          <a href="https://portfolio-geniemusic.vercel.app/" target="_blank" rel="noopener">Interactive Portfolio ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="scale.js"></script>
+</body>
+</html>
