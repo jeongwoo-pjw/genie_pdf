@@ -113,7 +113,7 @@
             </div>
           </div>
         </div>
-        <div class="s-foot"><span><b>PARK JEONG WOO</b> · UX/UI Designer</span><span>01 / 13</span></div>
+        <div class="s-foot"><span><b>PARK JEONG WOO</b> · UX/UI Designer</span><span>01 / 14</span></div>
       </div>
     </section>
 
@@ -157,6 +157,14 @@
               <li><img src="assets/img/goal/shortcut.png" alt="" /><span>연관추천 프로세스 단축</span></li>
             </ul>
           </div>
+        </div>
+
+        <!-- 사용성 테스트 핵심 결과 요약(상세: P.12) -->
+        <div class="vh">
+          <span class="vh-label">VALIDATION HIGHLIGHT</span>
+          <div class="vh-m"><b>71.6<small>%</small></b><div><p>수행시간 감소</p><span>기존 앱 성공자 7명 기준 동일 참가자 비교</span></div></div>
+          <div class="vh-m"><b>100<small>%</small></b><div><p>개선안 과업 성공률</p><span>기존 87.5% → 개선안 100%</span></div></div>
+          <div class="vh-note"><p>추천곡 탐색 후 기존 재생곡으로 복귀하는 과업 · 8명 대상 프로토타입 테스트</p><span class="pref">Detailed Results · P.12</span></div>
         </div>
       </div>
     </section>
@@ -328,8 +336,8 @@
               <div class="dir-cols"><span>POSITIONING</span><i></i><span>UX PROBLEM</span><i></i><span>UX DIRECTION</span></div>
               <ol>
                 <li><p class="pos-k">실용성·기능성에 강점</p><span class="arr">→</span><p class="from">돌비 애트모스·굿나잇 뮤직 등 차별화 기능의 낮은 발견성</p><span class="arr">→</span><p class="to">차별화 기능을 홈·내비게이션에 노출 <span class="pref">P.08</span></p></li>
-                <li><p class="pos-k">사용자 주도형 청취 경험에 가까운 포지셔닝</p><span class="arr">→</span><p class="from">연관 추천까지 경로가 길어 탐색 흐름이 끊김</p><span class="arr">→</span><p class="to">추천 진입 단축 · 미리듣기 맥락 유지 <span class="pref">P.09–10</span></p></li>
-                <li><p class="pos-k">유용함 중심의 서비스 경험</p><span class="arr">→</span><p class="from">플레이리스트 편집 상태를 파악하기 어려움</p><span class="arr">→</span><p class="to">편집 모드 분리 · 선택 상태 명확화 <span class="pref">P.12</span></p></li>
+                <li><p class="pos-k">사용자 주도형 청취 경험에 가까운 포지셔닝</p><span class="arr">→</span><p class="from">연관 추천까지 경로가 길어 탐색 흐름이 끊김</p><span class="arr">→</span><p class="to">추천 진입 단축 · 미리듣기 맥락 유지 <span class="pref">P.09–11</span></p></li>
+                <li><p class="pos-k">유용함 중심의 서비스 경험</p><span class="arr">→</span><p class="from">플레이리스트 편집 상태를 파악하기 어려움</p><span class="arr">→</span><p class="to">편집 모드 분리 · 선택 상태 명확화 <span class="pref">P.13</span></p></li>
               </ol>
             </div>
           </div>
@@ -660,25 +668,26 @@
           <span class="eyebrow">UX/UI · Preview Interaction</span>
         </div>
         <h2 class="s-title">앨범을 좌우로 넘기며, <em>추천곡을 직관적으로 탐색해요</em></h2>
-        <p class="s-sub">미리듣기 카드 안에서 앨범 커버를 스와이프하고, 카드를 닫으면 기존 청취 화면으로 돌아갑니다.</p>
+        <p class="s-sub">추천곡을 좌우로 탐색하고, 미리듣기를 닫으면 듣던 음악으로 돌아가요.</p>
 
-        <!-- GUI 약 70%: 고정된 미리듣기 카드 1개, 카드 안의 앨범 표지만 좌우 스와이프 -->
+        <!-- GUI 약 62%(왼쪽, 메인): 점선 휴대폰 윤곽 + 미리듣기 카드(맨 앞) + 양옆 뒤로 겹치는 앨범 -->
+        <span class="gx-box" aria-hidden="true"></span>
         <span class="rc-chip b gx-tag">GUI</span>
-        <p class="gx-cap">GUI를 통해 부가정보를 이미지와 함께 한눈에 탐색해요</p>
+        <p class="gx-cap">좌우 스와이프로 추천곡을 탐색해요</p>
         <span class="gx-outline" aria-hidden="true"></span>
         <!-- 고정된 미리듣기 카드 1개(점선 아이폰 윤곽 안, 여백 확보) -->
         <img class="gv" src="assets/img/gui/card-ihope.png" alt="i hope u see this 미리듣기 카드 — Chances (Feat.DCMBR), thuv" />
-        <!-- 앨범 캐러셀: 카드 앨범 영역(중심 y 593)을 기준으로 좌우로 이어지며 카드·윤곽 경계 밖으로 돌출 -->
+        <!-- 앨범 캐러셀: 카드 앨범 높이(중심 y 632) 기준, 카드 뒤로 겹치며 양옆으로 돌출 -->
         <img class="ga far l" src="assets/img/gui/album-act2.png" alt="Act Ⅱ: Date @ 8 앨범" />
         <img class="ga near l" src="assets/img/gui/album-beerbongs.png" alt="Beerbongs &amp; Bentleys 앨범" />
         <img class="ga near r" src="assets/img/gui/album-naujour.png" alt="NAUJOUR 앨범" />
         <img class="ga far r" src="assets/img/gui/album-snooze.png" alt="SOS 앨범" />
         <img class="ga main" src="assets/img/gui/album-ihope.png" alt="i hope u see this 앨범" />
-        <svg class="gv-chev" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M1094 697L1082 711L1094 725M1106 697L1094 711L1106 725" /><path d="M1350 697L1362 711L1350 725M1362 697L1374 711L1362 725" /></svg>
+        <svg class="gv-chev" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M458 618L446 632L458 646M470 618L458 632L470 646" /><path d="M796 618L808 632L796 646M784 618L796 632L784 646" /></svg>
 
-        <!-- BACK FLOW 약 30%: 01 미리듣기 → 02 닫기 → 03 기존 청취 유지 -->
+        <!-- BACK FLOW 약 38%(오른쪽, 보조): 01 미리듣기 → 02 닫기 → 03 기존 청취 유지 -->
         <div class="bf">
-          <span class="rc-chip bf-tag">BACK FLOW</span>
+          <div class="bf-head"><span class="rc-chip bf-tag">BACK FLOW</span><p class="bf-co">닫아도 듣던 음악은 그대로 유지돼요.</p></div>
           <div class="bf-row">
             <figure>
               <span class="bf-step"><i>01</i>미리듣기</span>
@@ -694,7 +703,6 @@
               </div>
             </figure>
           </div>
-          <p class="bf-co">닫아도 듣던 음악은 그대로 유지돼요.</p>
         </div>
       </div>
     </section>
@@ -721,17 +729,18 @@
           <div class="kpi main">
             <b>71.6<small>%</small></b>
             <p>수행시간 감소</p>
-            <span>평균 <strong>53.3초 → 15.1초</strong> · 기존 앱 성공자 7명 기준</span>
+            <span>평균 <strong>53.3초 → 15.1초</strong></span>
+            <span>기존 앱 과업 성공자 7명의 동일 참가자 기준 비교</span>
           </div>
           <div class="kpi">
             <b>87.5<small>%</small> → 100<small>%</small></b>
             <p>과업 성공률</p>
-            <span>기존 7/8명 · 개선안 8/8명</span>
+            <span>기존 앱 7/8명 · 개선안 8/8명</span>
           </div>
           <div class="kpi">
             <b>15.3<small>초</small></b>
             <p>개선안 평균 수행시간</p>
-            <span>개선안 8명 전체 평균</span>
+            <span>개선안 전체 참가자 8명의 평균 수행시간</span>
           </div>
         </div>
 
@@ -757,7 +766,7 @@
               <div class="ut-g"><div class="pair"><i class="a" style="height:104.5px"><b>38</b></i><i class="b" style="height:33px"><b>12</b></i></div><span>P8</span></div>
             </div>
           </div>
-          <p class="src">P6은 기존 앱에서 2분(120초)을 넘겨 과업에 실패해, 수행시간 평균(71.6%)에서는 제외하고 성공률에만 반영했습니다. 8명 규모의 프로토타입 비교 테스트 결과이며, 실제 서비스 전체의 성과로 일반화하지 않습니다.</p>
+          <p class="src">P6은 기존 앱에서 120초 내 과업을 완료하지 못해 평균 수행시간 비교(7명)에서 제외했습니다. 개선안 전체 평균은 8명 기준이며, 본 결과는 소규모 프로토타입 테스트로 실제 서비스 성과를 의미하지 않습니다.</p>
         </div>
       </div>
     </section>

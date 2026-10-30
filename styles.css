@@ -298,7 +298,7 @@ a { color: inherit; }
    02 Background & Goal — Background·Problem 컨테이너와 Goal을 50:50, 세로 중앙 정렬, 화살표 하나로 연결
 ------------------------------------------------------------------ */
 #p2 .s-title { font-size: 42px; }
-.og { margin-top: 104px; display: grid; grid-template-columns: 1fr 72px 1fr; align-items: center; }
+.og { margin-top: 72px; display: grid; grid-template-columns: 1fr 72px 1fr; align-items: center; }
 .og-pair, .og-col.goal { height: 600px; } /* 두 박스 동일 높이 */
 .og-pair { display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--r); background: #f3f6fb; }
 .og-col { display: flex; flex-direction: column; padding: 60px 44px; border-radius: var(--r); }
@@ -324,6 +324,17 @@ a { color: inherit; }
 .og-goals img { width: auto; height: 170px; max-width: 100%; margin: -38px 0 -34px; object-fit: contain; } /* PNG 글로우 여백 보정 */
 .og-col.goal .og-goals span { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.45; color: rgba(255, 255, 255, 0.92); word-break: keep-all; }
 .og-arr { display: flex; align-items: center; justify-content: center; font-size: 26px; color: var(--blue); }
+/* Validation Highlight: Overview 아래 한 줄 요약(개요보다 약하게) */
+.vh { margin-top: 32px; display: grid; grid-template-columns: auto 1fr 1fr auto; align-items: center; padding: 22px 40px; border: 1px solid rgba(0, 150, 255, 0.18); border-radius: var(--r); background: #eaf4ff; }
+.vh-label { padding-right: 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--blue); }
+.vh-m { display: flex; align-items: center; gap: 18px; padding: 0 36px; border-left: 1px solid rgba(0, 150, 255, 0.16); }
+.vh-m b { font-size: 44px; font-weight: 600; line-height: 1; letter-spacing: -0.02em; color: var(--blue); }
+.vh-m b small { font-size: 0.5em; font-weight: 500; }
+.vh-m p { font-size: 18px; font-weight: 600; }
+.vh-m span { display: block; margin-top: 2px; font-size: 15px; color: var(--ink-2); white-space: nowrap; }
+.vh-note { display: grid; justify-items: end; gap: 8px; padding-left: 36px; border-left: 1px solid rgba(0, 150, 255, 0.16); }
+.vh-note .pref { border-color: rgba(0, 150, 255, 0.2); background: #fff; }
+.vh-note p { font-size: 14px; color: var(--ink-2); white-space: nowrap; }
 
 /* ------------------------------------------------------------------
    03 Desk Research — 타이포 위계는 2페이지 기준(헤드라인 42 · 카드 제목 22 · 보조 16)
@@ -808,41 +819,47 @@ a { color: inherit; }
 .pc-chev { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none; overflow: visible; }
 .pc-chev path { fill: none; stroke: #149cff; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 6px rgba(4, 8, 22, 0.8)); }
 
-/* 11 Preview Interaction: 다크 네이비 · GUI 약 70%(고정 카드 1개, 앨범만 스와이프) · BACK FLOW 약 30%(보조 카드) */
-#p10b .slide { background: radial-gradient(760px 640px at 36% 62%, rgba(20, 156, 255, 0.1), transparent 62%), #141a33; }
+/* 11 Preview Interaction: 다크 네이비 · GUI 약 62%(왼쪽 메인 비주얼) · BACK FLOW 약 38%(오른쪽 보조 카드) */
+#p10b .slide { background: radial-gradient(760px 640px at 33% 60%, rgba(20, 156, 255, 0.1), transparent 62%), #141a33; }
 #p10b .s-top, #p10b .eyebrow { color: rgba(255, 255, 255, 0.6); }
 #p10b .s-title { color: #fff; } /* 8페이지와 동일: 42 / 600 */
 #p10b .s-title em { color: #149cff; }
 #p10b .s-sub { color: #b6c3d9; }
-/* GUI 영역: x 648–1808, 중심 x 1228 (BACK FLOW는 왼쪽 x 112–608). 점선 윤곽 하단(y 1110)은 슬라이드 경계에서 잘림 */
-.gx-tag { position: absolute; left: 1228px; top: 292px; transform: translateX(-50%); } /* 목업 상단 중앙: 라벨 → 설명 → 목업 */
-.gx-outline { position: absolute; left: 1039px; top: 390px; width: 378px; height: 720px; border: 2px dashed rgba(160, 178, 210, 0.7); border-radius: 58px; }
-.gx-cap { position: absolute; left: 1228px; top: 336px; transform: translateX(-50%); font-size: 18px; font-weight: 500; color: #dfe6f1; white-space: nowrap; }
-/* 미리듣기 카드: 340 × 549, 윤곽(420 × 800) 중앙 */
-.gv { position: absolute; left: 1075px; top: 503px; width: 306px; z-index: 2; border-radius: 26px; background: #2a2036; box-shadow: 0 30px 56px rgba(4, 8, 22, 0.6); }
-/* 앨범 캐러셀(슬라이드 좌표): 메인 = 카드 앨범 영역(폭 69.2%, 중심 x 692 · y 593), 좌우는 거리별로 작고 흐리게 */
+/* GUI 영역: x 112–1142, 중심 x 627 · BACK FLOW 카드: x 1182–1808. 두 영역 모두 y 240–1036 */
+/* GUI 박스: BACK FLOW(#222A40)보다 밝고 푸른 배경으로 메인 강조 */
+.gx-box { position: absolute; left: 112px; top: 240px; width: 1030px; height: 796px; border-radius: 28px; background: radial-gradient(520px 460px at 50% 52%, rgba(20, 156, 255, 0.18), transparent 70%), linear-gradient(160deg, #2a3d6b 0%, #223259 100%); box-shadow: inset 0 0 0 1px rgba(124, 200, 255, 0.16); }
+.gx-tag { position: absolute; left: 144px; top: 268px; } /* 박스 안 상단, BACK FLOW 라벨과 같은 높이 */
+.gx-cap { position: absolute; left: 215px; top: 268px; font-size: 18px; font-weight: 500; line-height: 27px; color: #dfe6f1; white-space: nowrap; }
+.gx-outline { position: absolute; left: 441px; top: 310px; width: 372px; height: 720px; border: 2px dashed rgba(160, 178, 210, 0.55); border-radius: 56px; }
+/* 미리듣기 카드: 300 × 484, 윤곽 중앙. 앨범보다 앞(카드 z 2 · 주변 앨범 z 0–1) */
+.gv { position: absolute; left: 477px; top: 428px; width: 300px; z-index: 2; border-radius: 25px; background: #2a2036; box-shadow: 0 30px 56px rgba(4, 8, 22, 0.6); }
+/* 앨범 캐러셀(슬라이드 좌표): 메인 = 카드 앨범 영역 위(중심 x 627 · y 632), 좌우는 카드 뒤에서 거리별로 작고 흐리게 */
 .ga { position: absolute; max-width: none; border-radius: 6px; transform: translateY(-50%); }
-.ga.main { left: 1106px; top: 711px; width: 243px; z-index: 5; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5); }
-.ga.near { top: 711px; width: 171px; z-index: 4; opacity: 0.8; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45); }
-.ga.near.l { left: 910px; }
-.ga.near.r { left: 1374px; }
-.ga.far { top: 711px; width: 135px; z-index: 3; opacity: 0.4; }
-.ga.far.l { left: 761px; }
-.ga.far.r { left: 1559px; }
+.ga.main { left: 508px; top: 632px; width: 238px; z-index: 5; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5); }
+.ga.near { top: 632px; width: 170px; z-index: 1; opacity: 0.8; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45); }
+.ga.near.l { left: 330px; }
+.ga.near.r { left: 754px; }
+.ga.far { top: 632px; width: 130px; z-index: 0; opacity: 0.4; }
+.ga.far.l { left: 225px; }
+.ga.far.r { left: 899px; }
 .gv-chev { position: absolute; left: 0; top: 0; z-index: 6; width: 1920px; height: 1080px; pointer-events: none; }
 .gv-chev path { fill: none; stroke: #149cff; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 5px rgba(4, 8, 22, 0.9)); }
-/* BACK FLOW: 차분한 다크 블루그레이 카드 1개 */
-.bf { position: absolute; left: 112px; width: 496px; top: 340px; display: flex; flex-direction: column; padding: 28px 32px 40px; border-radius: 28px; background: #222a40; }
-.bf-tag { align-self: flex-start; margin-bottom: 26px; } /* 라벨은 박스 안 상단 */
-.bf-row { display: flex; align-items: flex-start; }
-.bf-row figure { width: 168px; }
+/* BACK FLOW: 차분한 다크 블루그레이 카드(보조) */
+.bf { position: absolute; left: 1182px; right: 112px; top: 240px; bottom: 44px; display: flex; flex-direction: column; padding: 28px 32px 36px; border-radius: 28px; background: #222a40; }
+.bf-head { display: flex; align-items: center; gap: 14px; } /* 라벨 + 설명 한 줄(GUI와 동일) */
+.bf-head .rc-chip { margin-bottom: 0; }
+.bf-row { margin-top: auto; display: flex; align-items: flex-start; }
+/* 두 화면 높이 475로 통일(비율 유지) */
+.bf-row figure:first-child { width: 233px; }
+.bf-row figure:last-child { width: 219px; }
 .bf-row .ab-shot { margin-top: 14px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12); }
 .bf-step { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 500; color: #dfe6f1; white-space: nowrap; }
 .bf-step i { flex: none; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #3a4560; font-size: 11px; font-weight: 600; font-style: normal; color: #c9d1dc; }
-.bf-arr { flex: 1; display: grid; justify-items: center; gap: 12px; margin-top: 170px; }
-.bf-arr b { position: relative; width: 52px; height: 2px; background: rgba(182, 195, 217, 0.45); }
-.bf-arr b::after { content: ''; position: absolute; right: 0; top: -4px; width: 8px; height: 8px; border-top: 2px solid rgba(182, 195, 217, 0.7); border-right: 2px solid rgba(182, 195, 217, 0.7); transform: rotate(45deg); }
-.bf-co { margin-top: 40px; text-align: center; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #fff; }
+.bf-arr { flex: 1; display: grid; justify-items: center; gap: 12px; margin-top: 238px; }
+.bf-arr b { position: relative; width: 52px; height: 2px; background: #149cff; }
+.bf-arr b::after { content: ''; position: absolute; right: 0; top: -4px; width: 8px; height: 8px; border-top: 2px solid #149cff; border-right: 2px solid #149cff; transform: rotate(45deg); }
+.bf-co { font-size: 18px; font-weight: 500; line-height: 27px; color: #dfe6f1; white-space: nowrap; }
+.bf-row { margin-bottom: auto; }
 
 /* 13 재생목록 편집: 8페이지와 같은 전체 높이 세로 분할 — AS-IS 27%(#2B3039) · TO-BE 73%(#171C2B), TO-BE 3단계는 9페이지 3D 목업(.ip9) */
 #p12 .slide { padding: 0; background: linear-gradient(90deg, #2b3039 0 27%, #171c2b 27% 100%); }
@@ -960,11 +977,11 @@ a { color: inherit; }
 #p11 .ut-cond > div { padding: 0 28px; border-left: 1px solid var(--line); }
 #p11 .ut-cond > div:first-child { border-left: 0; }
 #p11 .ut-kpi { margin-top: 20px; gap: 20px; }
-#p11 .kpi { padding: 26px 36px; border: 0; border-radius: var(--r); background: #fff; }
+#p11 .kpi { padding: 22px 36px; border: 0; border-radius: var(--r); background: #fff; }
 #p11 .kpi.main { background: var(--navy); }
 #p11 .ut-chart { margin-top: 20px; padding: 24px 32px 22px; border-radius: var(--r); background: #fff; }
 #p11 .ut-plot { margin-top: 22px; }
-#p11 .ut-chart .src { margin-top: 46px; }
+#p11 .ut-chart .src { margin-top: 42px; }
 
 /* 14 배경: 1페이지 표지와 같은 다크 네이비, 텍스트·구분선·카드 명도만 조정 */
 #p13 .slide {
